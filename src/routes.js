@@ -11,7 +11,7 @@ const AppRoutes=()=>
 
         <Route path="/page-2" component={Calculator} />
         <Route path="/page-1" component={Testimonial} />
-
+        <Route path="/" component={Testimonial} />
       </Switch>
     </App>
 export default AppRoutes;

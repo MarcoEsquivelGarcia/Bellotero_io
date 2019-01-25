@@ -7,7 +7,9 @@ const initialState={
   index:0,
   calculator:[],
   monthly: 36.211,
-  fulltimerange:1
+  fulltimerange:8,
+  foodcostsavings:1.086,
+  anualsavings:1*1337+1.086
 }
 
 const reducer=(state=initialState,action)=>{
@@ -52,9 +54,16 @@ const reducer=(state=initialState,action)=>{
     if(action.type==='RANGE_CHANGE')
     {
         if(action.name=="monthly")
-          newState.monthly=action.value
+          {
+            newState.monthly=action.value,
+            newState.foodcostsavings=action.value*.3,
+            newState.anualsavings=newState.fulltimerange*1337+(action.value*.3)
+          }
         else
-          newState.fulltimerange=action.value
+          {
+              newState.fulltimerange=action.value,
+              newState.anualsavings=action.value*1337+(newState.foodcostsavings)
+          }
 
     }
     return newState;
