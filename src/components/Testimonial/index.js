@@ -32,8 +32,8 @@ class Testimonial extends Component{
                 <div className="wrapbuttons">
                     <div className="totalComment"><span >{this.props.slider.length==0?"":(this.props.commentActual+1)}/{this.props.slider.length==0?"":this.props.totalcomments}</span></div>
                     <div className="buttons">
-                            <button name="prevComment" onClick={this.props.prevComment}>&#8249;-</button>
-                            <button name="nextComment" onClick={this.props.nextComment} >-&#8250;</button>
+                            <button name="prevComment" onClick={this.props.prevComment}>&#8592;</button>
+                            <button name="nextComment" onClick={this.props.nextComment} >&#8594;</button>
                     </div>
                 </div>
 
